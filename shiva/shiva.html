@@ -63,6 +63,12 @@
         .close-button:hover {
             color: #ff5733;
         }
+        #img{
+
+            width: 800px;
+            height: 700px;
+            border-radius:50%;
+        }
 
         /* Button animation */
         #showInvitationButton {
@@ -94,19 +100,19 @@
 </head>
 <body>
     <div class="row">
-    <div id="img"><img style="border-radius: 50%; " src="./1.jpg" alt=""><br></div><br><br><br>
-    
-</div>
-    <div class="row">
-        <br><br><br>
-        <div class="row"></div>
-        <div class="row"></div>
-        <div class="row"></div>
-        <div class="row"></div>
         
-    <button id="showInvitationButton" style="background-color: #ff5733; color: white; border: none; padding: 20px 20px; font-size: 18px; border-radius: 5px; cursor: pointer;">click me </button>
+    <img  style="width: 400px;
+        height: 400px;
+        border-radius:50%" src="./1.jpg" alt="">
+
+       <div class="row">
+        
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <div class="col"></div>
+   <div class="col"></div>
+   <div class="col"></div>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="showInvitationButton" style="background-color: #ff5733; color: white; border: none; padding: 20px 20px; font-size: 18px; border-radius: 5px; cursor: pointer;">click me </button>
 </div>
-    
+    </div>
     <div class="popup-container" id="invitationPopup">
         <div class="popup">
             <span class="close-button" onclick="closePopup()">&times;</span>
