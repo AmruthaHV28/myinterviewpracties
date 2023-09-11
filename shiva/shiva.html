@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .popup-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .popup {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            animation: fadeIn 0.5s;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+            max-width: 80%;
+            position: relative;
+        }
+
+        .popup h2 {
+            color: #ff5733;
+            font-size: 24px;
+        }
+
+        .popup p {
+            color: #333;
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        .close-button {
+            cursor: pointer;
+            font-size: 24px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #555;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .close-button:hover {
+            color: #ff5733;
+        }
+
+        /* Button animation */
+        #showInvitationButton {
+            background-color: #ff5733;
+            color: white;
+            border: none;
+            padding: 20px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        #showInvitationButton:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+    <div id="img"><img style="border-radius: 50%; " src="./1.jpg" alt=""><br></div><br><br><br>
+    
+</div>
+    <div class="row">
+        <br><br><br>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+        
+    <button id="showInvitationButton" style="background-color: #ff5733; color: white; border: none; padding: 20px 20px; font-size: 18px; border-radius: 5px; cursor: pointer;">click me </button>
+</div>
+    
+    <div class="popup-container" id="invitationPopup">
+        <div class="popup">
+            <span class="close-button" onclick="closePopup()">&times;</span>
+            <h2>Thank You, Likith!</h2>
+            <p>Thank you for coming today..... it's a fitting end to our meetings. 
+              <br>  It's great connecting with you on Instagram! <br>
+              Of course, it's perfectly fine to take a break right?..i feel bit  exhausted  all because me only 
+              . Self-care and setting boundaries are important. If you ever want to continue the conversation in the future, feel free to reach out. Take care....
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const invitationPopup = document.getElementById("invitationPopup");
+        const showInvitationButton = document.getElementById("showInvitationButton");
+
+        function showPopup() {
+            invitationPopup.style.display = "flex";
+            document.body.style.overflow = "hidden"; // Prevent scrolling when the popup is open
+        }
+
+        function closePopup() {
+            invitationPopup.style.display = "none";
+            document.body.style.overflow = "auto"; // Enable scrolling when the popup is closed
+        }
+
+        showInvitationButton.addEventListener("click", showPopup);
+    </script>
+</body>
+</html>
